@@ -1,5 +1,5 @@
 # Typescript REST api starter
-Making a new api from scratch is annoying. Just use this. Ez PZ
+Making a new api from scratch is annoying. Just use this. Ez PZ. You can 1 to 1 follow this pattern for a vanilla javascript api as well. This approach very testable and easy to work with.
 
 ### Entry Point
 bin/www houses the starter code. You can run this via:

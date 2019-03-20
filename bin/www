@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+require('ts-node/register');
+const http = require('http');
+const makeApp = require('../src/api/make-app').default;
+const initializeApi = require('../src/api/initialize-app').default;
+const package = require('../package.json')
+const { NODE_PORT } = require('../src/config');
+
+function main() {
+  const apiApp = makeApp();
+  const apiServer = http.createServer(apiApp);
+
+
+  initializeApi(apiApp);
+
+  apiServer.on('error', console.error);
+  apiServer.on('listening', () => console.log(`${package.name} ${package.version} listening on 127.0.0.1:${NODE_PORT}`));
+  apiServer.listen(NODE_PORT);
+}
+
+main();

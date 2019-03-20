@@ -1,0 +1,5 @@
+--colors
+--inline-diffs
+--recursive
+--require ./test/helpers.js
+--reporter spec

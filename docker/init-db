@@ -1,0 +1,12 @@
+#!/bin/bash
+
+database=$1
+
+if [[ -z $database ]];
+then
+  database="DEFAULT_DATABASE_NAME_HERE"
+fi
+
+echo "Database is $database"
+
+docker run --name ${database} -p 5432:5432 -e DOCKER_HOST=127.0.0.1 -e POSTGRES_PASSWORD=${hostname} -e POSTGRES_DB=${database} -v $(pwd)/db-data:/var/lib/postgresql/data -d postgres:9.6 > process.txt

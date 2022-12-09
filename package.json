@@ -33,7 +33,7 @@
     "custom-error-generator": "^7.0.0",
     "dotenv": "^7.0.0",
     "dotenv-expand": "^5.1.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "knex": "^0.16.3",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
